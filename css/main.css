@@ -55,6 +55,8 @@
         bottom: 0px;
         min-width: 100%;
         min-height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     .img-scroll {
       height: 200px;
@@ -84,6 +86,7 @@
     }
 
     .scrolling-ball {
+      max-width: 100%;
       animation: marquee 20s linear infinite;
       pointer-events: none; 
     }
@@ -98,7 +101,7 @@
 
     .scrolling-ball1 {
       animation: marquee1 30s linear infinite;
-     
+      max-width: 100%;
       pointer-events: none; 
     }
     @keyframes marquee1 {
@@ -113,6 +116,7 @@
     .scrolling-ball2 {
       animation: marquee2 40s linear infinite;
       pointer-events: none; 
+      max-width: 100%;
     }
     @keyframes marquee2 {
       from {
@@ -123,19 +127,26 @@
       }
     }
     @media (max-width: 414px) {
+      #myVideo {
+          width: 414px;
+        }
+      .img-scroll {
+        margin-top: 50px;
+      height: 120px;
+        }
       .img-otk {
       z-index: -1;
-        width: 150px;
-        bottom: 40px;
-        right: 40px;
-        height: 180px;
+      width: 130px;
+      bottom: 40px;
+      right: 10px;
+      height: 122px;
       } 
       .wrapper {
         width: 414px; 
         height: auto;
       }
       .content {
-        width: calc(100% - 40px);
+        width: calc(414px - 40px);
       }
       #close-button {
         display: block;
@@ -147,6 +158,9 @@
       }
     }
     @media (max-width: 390px) {
+        #myVideo {
+     width: 390px;
+        }
       .wrapper {
         width: 390px;
         height: auto;
@@ -162,8 +176,12 @@
     }
     
     @media (max-width: 375px) {
+
+      #myVideo {
+        width: 375px;
+      }
       .wrapper {
-        width: calc(375px - 40px);  
+        width: 375px;  
         height: auto;
       }
       .content {
