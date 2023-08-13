@@ -63,7 +63,7 @@
       position: fixed;
       width: 205px;
       bottom: 20px;
-      right: -20px;
+      right: 20px;
       height: 180px;
     } 
     .content {
@@ -123,6 +123,13 @@
       }
     }
     @media (max-width: 414px) {
+      .img-otk {
+      z-index: -1;
+        width: 150px;
+        bottom: 20px;
+        right: 20px;
+        height: 180px;
+      } 
       .wrapper {
         width: 414px; 
         height: auto;
