@@ -1,4 +1,10 @@
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 0;
+  }
     body {
       position: relative;
     }
@@ -38,54 +44,48 @@
         box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,0.75);
       }
       .wrapper {
-        max-width: 1440px;
+        max-width: 1400px;
+        padding: 20px;
         height: auto;
       }
       #myVideo {
-        z-index: -1; /* Чтобы видео было под другими элементами */
+        z-index: -1;  
         position: fixed;
         right: 0;
         bottom: 0px;
         min-width: 100%;
         min-height: 100%;
     }
-    .img-scroll {
+    /* .img-scroll {
       height: 200px;
-    }
+    } */
     .img-otk {
-position: fixed;
+      position: fixed;
       width: 205px;
       bottom: 0px;
       right: -10px;
       height: 180px;
     } 
-    /* Add some content at the bottom of the video/page */
     .content {
-      margin-top: 10px;
         display: block;
         position: fixed;
-        /* bottom: 0; */
         background: rgba(0, 0, 0, 0.3);
         color: #f1f1f1;
-        width: 100%;
-        /* padding: 20px; */
+        width: calc(100% - 40px);
+      
+        padding: 5px 20px;
         display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
-    margin: 20;
     }
     .content__img {
       width: 100px;
       border-radius: 50%;
-      margin-right: 60px;
     }
-
-
-
 
     .scrolling-ball {
       animation: marquee 20s linear infinite;
+      height: 200px;
     }
     @keyframes marquee {
       from {
@@ -98,6 +98,7 @@ position: fixed;
 
     .scrolling-ball1 {
       animation: marquee1 30s linear infinite;
+      height: 200px;
     }
     @keyframes marquee1 {
       from {
@@ -110,6 +111,7 @@ position: fixed;
 
     .scrolling-ball2 {
       animation: marquee2 40s linear infinite;
+      height: 200px;
     }
     @keyframes marquee2 {
       from {
@@ -119,10 +121,37 @@ position: fixed;
         transform: translateX(-100%);
       }
     }
- /* @media (min-width: 414px) {
-  .wrapper {
-    width: 414px;
-    height: auto;
-  }
-
- } */
+    @media (max-width: 414px) {
+      .wrapper {
+        width: calc(414px - 40px); 
+        height: auto;
+      }
+      .content {
+        width: calc(414px - 40px);
+      }
+      #close-button {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+    @media (max-width: 390px) {
+      .wrapper {
+        width: calc(390px - 40px);
+        height: auto;
+      }
+      .content {
+        width: calc(390px - 40px); 
+      }
+    
+    }
+    
+    @media (max-width: 375px) {
+      .wrapper {
+        width: calc(375px - 40px);  
+        height: auto;
+      }
+      .content {
+        width: calc(375px - 40px);  
+      }
+     
+    }
