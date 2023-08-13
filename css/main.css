@@ -62,8 +62,8 @@
     .img-otk {
       position: fixed;
       width: 205px;
-      bottom: 0px;
-      right: -10px;
+      bottom: 20px;
+      right: -20px;
       height: 180px;
     } 
     .content {
